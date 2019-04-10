@@ -39,6 +39,7 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(bin_search(7,0,len(listn)-1,listn),None)
         with self.assertRaises(ValueError):
             bin_search(1,0,9,None)
+        self.assertEqual(bin_search(1,0,1,[]),None)
 if __name__ == "__main__":
         unittest.main()
 
