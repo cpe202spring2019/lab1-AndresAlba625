@@ -14,7 +14,13 @@ def reverse_rec(int_list):   # must use recursion
     return [] if not int_list else int_list[-1:] + reverse_rec(int_list[:-1])   
 
 def bin_search(target, low, high, int_list):  # must use recursion
-    mid = int((high+low)/2)
+    if int_list == None:
+        raise ValueError
+    elif int_list == []:
+        return None
+    else:
+        mid = int((high+low)/2)
+    
     if(int_list == None):
         raise ValueError
 
